@@ -16,6 +16,7 @@ public class MyRedisTempalate {
 
 	@Bean
 	public StringRedisTemplate ooxx(RedisConnectionFactory fc) {
+		System.out.println("hello world");
 		StringRedisTemplate tp = new StringRedisTemplate(fc);
 		tp.setHashValueSerializer(new Jackson2JsonRedisSerializer<Object>(Object.class));
 		return tp;
